@@ -1,0 +1,47 @@
+
+@()
+
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+@*<picture>*@
+@*    <source srcset="img_small.jpg" media="(max-width: 600px)">*@
+@*    <source srcset="img_large.jpg">*@
+@*    <img src="img_default.jpg" alt="Image">*@
+@*</picture>*@
+<html>
+    <head>
+        <title>My Article</title>
+        <img src="@routes.Assets.versioned("images/PentecostTruth.svg")" alt="Logo">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/Article.css")">
+    </head>
+    <body>
+        <header>
+            <h1>My Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h2>My Article Title</h2>
+                <p>My article content...</p>
+            </article>
+            <aside>
+                <h3>Related Articles</h3>
+                <ul>
+                    <li><a href="/article-1">Article 1</a></li>
+                    <li><a href="/article-2">Article 2</a></li>
+                    <li><a href="/article-3">Article 3</a></li>
+                </ul>
+            </aside>
+        </main>
+        <footer>
+            <p>© 2023 My Website</p>
+        </footer>
+    </body>
+</html>
+

@@ -1,0 +1,226 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logo {
+    color: #9eb0ce;
+    text-decoration: none;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    background-color: #6b79f5;
+    color: white;
+    padding: 20px 0;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 40px 0;
+}
+
+main .container {
+    display: flex;
+}
+
+article {
+    flex: 3;
+}
+
+article h1 {
+    font-size:36px;
+    margin-bottom:20px;
+}
+article p{
+    margin-bottom:20px;
+}
+article section {
+    margin-bottom:40px;
+}
+article section h2{
+    font-size:24px;
+    margin-bottom:10px;
+}
+article section p{
+    margin-bottom:10px;
+}
+article section ul{
+    list-style:square inside;
+    margin-bottom:20px;
+}
+article section img{
+    max-width:100%;
+}
+aside {
+    flex:1;
+    margin-left:40px;
+}
+aside h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+aside ul{
+    list-style:none;
+    margin-bottom:20px;
+}
+aside ul li{
+    margin-bottom:5px;
+}
+aside ul.tags li{
+    display:inline-block;
+}
+aside ul.tags li a{
+    display:block;
+    padding:5px;
+    background:#f4f4f4;
+    color:#333;
+    text-decoration:none;
+    margin-right:5px;
+    margin-bottom:5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.task-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.task-list .task-card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.task-list .task-card h3 {
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.task-list .task-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.task-list .task-card li {
+    padding: 20px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.task-list .task-card li:last-child {
+    border-bottom: none;
+}
+
+
+.form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer{
+    background:#333;
+    color:white;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+}
+footer .container{
+    display:flex;
+}
+footer .container div{
+    flex-basis:33.33%;
+}
+footer .container div h3{
+    font-size:18px;
+}
+footer .container div ul{
+    list-style:none;
+}
+footer .container div ul li a{
+    color:white;
+    text-decoration:none;
+}

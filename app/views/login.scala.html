@@ -1,0 +1,74 @@
+@(loginForm : Form[SignUpData] )(implicit request : MessagesRequestHeader, flash : Flash)
+
+@main("Login") {
+
+    <h2>Login</h2>
+    <div class="task-list">
+        <div class="task-card">
+    <div class="form">
+    <form method="get" action="validateLogin1">
+        <h2>Login with Get Method</h2>
+        <br>
+        Username: <input type="text" name="username"></input>
+            <br>
+        Password: <input type="text" name="password"></input>
+            <br>
+        <input type="submit"></input>
+        <br>
+    </form>
+    </div>
+        </div>
+    </div>
+    <br>
+    <div class="task-list">
+        <div class="task-card">
+    <div class="form">
+    <form method="post" action=@routes.TaskListController.validateLoginPost>
+        @helper.CSRF.formField(request)
+        <h3>Login with Put Method</h3>
+        <br>
+        Username: <input type="text" name="username" id="username-login"></input>
+        <br>
+        Password: <input type="text" name="password" id="password-login"></input>
+        <div class="form-actions">
+            <button type="submit">Log In</button>
+        </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    <div class="task-list">
+        <div class="task-card">
+    <div class="form">
+    @helper.form(action = routes.TaskListController.validateSignUpForm) {
+        @helper.CSRF.formField
+        @helper.inputText(loginForm("Username"))
+        @helper.inputText(loginForm("Password"))
+        <div class="form-actions">
+            <button type="submit">Sign-Up</button>
+        </div>
+    }
+    </div>
+        </div>
+    </div>
+    <br>
+    <div class="task-list">
+        <div class="task-card">
+    <div class="form">
+    <form method="post" action=@routes.TaskListController.createUserPost>
+        @helper.CSRF.formField(request)
+        <h3>Create A User</h3>
+        Choose A Username: <input type="text" name="username" id="username-create"></input>
+        <br>
+        Pick A Password: <input type="text" name="password" id="password-create"></input>
+        <div class="form-actions">
+            <button type="submit">Sign-Up</button>
+        </div>
+        <br>
+    </form>
+    <br>
+    </div>
+        </div>
+    </div>
+
+}

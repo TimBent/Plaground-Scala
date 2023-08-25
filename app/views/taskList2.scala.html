@@ -1,0 +1,25 @@
+@( tasks : Seq[String] )(implicit flash : Flash)
+
+    <h1>Welcome to the list of tasks</h1>
+    <br>
+
+    <ol id="taskList">
+    @for( (task, i) <- tasks.zipWithIndex) {
+        <div class="task-list">
+            <div class="task-card">
+                <li onclick="deleteTask(@i)"> @task </li>
+            </div>
+        </div>
+    }
+
+    </ol>
+
+
+        <input type="text" name="newTask" alt="Add task here!" id="new-task-input"></input>
+        <button onclick="addTask()"></button>
+
+
+    <div>
+        <a href="@routes.TaskListController.logout()">Logout</a>
+    </div>
+<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/Article.css")">

@@ -1,0 +1,12 @@
+@()(implicit flash: Flash)
+
+@main("Welcome to Play") {
+  <h1>Welcome to Play!</h1>
+
+  <p id="randomText">Click here to generate a random number: <span id="random">4</span></p>
+
+  <input type="text" id="inputLength" value="5"></input>
+  <p id="randomString">Click here to generate a random String: <span id="randomWord">word</span></p>
+
+  <script src="@routes.Assets.versioned("javascripts/randomNumber.js")" type="text/javascript"></script>
+}

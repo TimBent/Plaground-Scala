@@ -1,0 +1,35 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index()
+
+GET     /articles                   controllers.ArticleController.index()
+
+
+GET     /productInfo                        controllers.HomeController.product(prodType, prodNum: Int)
+GET     /product/:prodType/:prodNum         controllers.HomeController.product(prodType, prodNum: Int)
+GET     /random                             controllers.HomeController.randomNumber()
+GET     /randomString/:length               controllers.HomeController.randomString(length : Int)
+
+#Routes for version 1
+GET     /validateLogin1                     controllers.TaskListController.validateLoginGet(username, password)
+POST    /validateLoginPost1                 controllers.TaskListController.validateLoginPost
+POST    /validateForm1                      controllers.TaskListController.validateSignUpForm
+POST    /createUser                         controllers.TaskListController.createUserPost
+GET     /login                              controllers.TaskListController.login()
+GET     /taskList1                          controllers.TaskListController.taskList()
+GET     /logout1                            controllers.TaskListController.logout()
+POST    /addTask                            controllers.TaskListController.addTask
+POST    /deleteTask                         controllers.TaskListController.deleteTask
+
+#routes for version 2
+GET     /load2                              controllers.TaskList2Controller.load
+GET     /login2                             controllers.TaskList2Controller.login
+GET     /validate2                          controllers.TaskList2Controller.validate2(username, password)
+GET     /create2                            controllers.TaskList2Controller.createUser(username, password)
+GET    /deleteTask2                        controllers.TaskList2Controller.deleteTask( index : Int)
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

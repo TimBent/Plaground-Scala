@@ -35,7 +35,6 @@ class TaskList2Controller @Inject()(controllerComponents: ControllerComponents) 
    }
   }
 
-
   def deleteTask(index: Int) = Action { implicit request => {
     val usernameFromSession = request.session.data.get("username")
     usernameFromSession.map { username =>

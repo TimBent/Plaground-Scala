@@ -22,3 +22,8 @@ function deleteTask( index ){
     $("#container2").load("/deleteTask2?index="+index);
 }
 
+function deleteTask( index ){
+    const newTask = document.getElementById("new-task-input").value;
+    $("#container2").load("/addTask2?index="+newTask);
+}
+
